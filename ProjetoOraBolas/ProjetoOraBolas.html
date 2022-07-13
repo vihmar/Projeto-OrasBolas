@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projeto Ora Bolas</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+<body style="background-color: AliceBlue">
+<div id="hub">
+    <center>
+        <h1 style="color: White">Menu</h1>
+        <a id="sobre" href="SobreOProjeto.html">Sobre o Projeto</a>
+        <a id="Projeto" href="ProjetoOraBolas.html">Projeto Ora Bolas</a>
+        <a id="Desenvolvedores" href="Desenvolvedores.html">Sobre Os Desenvolvedores</a>
+    </center>
+</div>
+
+<div id="subhub">
+    <center>
+        <h2 style="color: White">Coloque os pontos e produza os Gráficos!</h2>
+        <input type="button" class="botoes" value=" Tragetória " onclick="TragetoriaRoboBola()" size="45">
+        <input type="button" class="botoes" value=" X em Função do Tempo" onclick="coordxbolaRobo()" size="45">
+        <input type="button" class="botoes" value=" Y em Função do Tempo" onclick="coordybolaRobo()" size="45">
+        <input type="button" class="botoes" value=" Velocidade X" onclick="velocidadeRoboBolaX()" size="45">
+        <input type="button" class="botoes" value=" Velocidade Y" onclick="velocidadeRoboBolaY()" size="45">
+        <input type="button" class="botoes" value=" Aceleração" onclick="aceleracaorobobola()" size="45">
+        <input type="button" class="botoes" value=" Distância " onclick="distanciaRobo()" size="45">
+        <input type="button" class="botoes" value=" Simulação " onclick="canvas()" size="45">
+        <input type="button" class="botoes" value=" Infos " onclick="infos()" size="45">
+    </center>
+
+    <center>
+        <input type="button" class="botoesenvia" id="botao" value="Salvar Ponto!" onclick="LogicaDoRobo()" size="50">
+        <input type="text" class="botoesenvia" id="PontoInicialX" size="3" value="X" maxlength="3"/>
+        <input type="text" class="botoesenvia" id="PontoInicialY" size="3" value="Y" maxlength="3"/>
+    </center>
+</div>
+
+
+<div id="graficoRoboBola"></div>
+
+<div id="coordxbolaRobo"></div>
+
+<div id="coordybolaRobo"></div>
+
+<div id="velocidadeRoboBolaX"></div>
+
+<div id="velocidadeRoboBolaY"></div>
+
+<div id="aceleracaorobobola"></div>
+
+<div id="distanciaRobo"></div>
+<br>
+<center>
+    <canvas id="myCanvas" height="600px" width="900px"></canvas>
+</center>
+
+
+
+
+<script src="robo.js"></script>
+
+</body>
+
+</html>
